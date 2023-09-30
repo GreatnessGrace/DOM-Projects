@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+  color: white;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: rgb(0, 208, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#card {
+  height: 480px;
+  width: 320px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 3px solid black;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#stories {
+  height: 120px;
+  width: 100%;
+  padding: 5px;
+  border-bottom: 1px solid #dadada;
+  padding: 15 px;
+  white-space: nowrap; /*Parent have this property which mean if block elments fill the all space other elements will also be in same line */
+  overflow-x: auto; /* Will add a scroll bar in x -axis for the overflowing elements*/
+  overflow-y: hidden;
+}
+
+#stories::-webkit-scrollbar {
+  display: none; /*For hiding the scroll bar*/
+}
+.story {
+  border: 3px solid red;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block; /*We are giving child this property , by which elements will follow properties of block but in line  */
+  margin-right: 5px;
+}
+
+.story img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#full-screen {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  display: none;
+}
